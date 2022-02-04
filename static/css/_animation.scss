@@ -1,0 +1,18 @@
+/*
+    @ Filename       : _animation.scss
+    @ Author         
+    @ Dependency     : 
+    @ Description    : 
+    @ Date           : 
+*/
+
+@keyframes yMoving {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-5%);
+    }
+}
+
