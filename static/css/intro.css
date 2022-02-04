@@ -754,7 +754,7 @@ header .btn-change-theme {
 }
 
 .main-top {
-  padding: 13rem 0 2rem 0;
+  padding: 18rem 0 8rem 0;
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
@@ -831,14 +831,29 @@ header .btn-change-theme {
   font-size: 1.4rem;
 }
 
+.experience-list .tab-expanded {
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
 .experience-list .ex-period {
-  text-align: right;
+  display: inline-block;
+  opacity: 0.8;
+}
+
+.experience-list .position {
+  margin-top: 10px;
 }
 
 .experience-list .company-name {
   color: #004E93;
   margin-top: 1.5rem;
   font-weight: 500;
+  font-size: 1.15em;
+}
+
+.experience-list .ex-detail {
+  margin-top: 2rem;
 }
 
 .experience-list .ex-detail li {
@@ -901,8 +916,9 @@ header .btn-change-theme {
 
 .featured-project-list .pjt-item_description dt {
   font-size: 1.6rem;
-  line-height: 24px;
   font-weight: 600;
+  color: #111;
+  font-size: 2rem;
 }
 
 .featured-project-list .pjt-item_description dd {
@@ -912,7 +928,7 @@ header .btn-change-theme {
 
 .featured-project-list .pjt-item_description .skills {
   margin-top: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #004E93;
   text-transform: uppercase;
   display: -webkit-box;
@@ -925,9 +941,15 @@ header .btn-change-theme {
           align-items: center;
 }
 
+.featured-project-list .pjt-item_description .skills span {
+  font-weight: 700;
+  margin-right: 4px;
+}
+
 .featured-project-list .pjt-item_description .skills span::before {
   content: '#';
   font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .featured-project-list .pjt-item_description .pjt-detail {
@@ -965,6 +987,7 @@ header .btn-change-theme {
   background-repeat: no-repeat;
   background-position: center;
   margin-left: 10px;
+  background-size: 20px;
 }
 
 .featured-project-list .pjt-item_description .link > a.link-git {
