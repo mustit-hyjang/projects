@@ -1,0 +1,33 @@
+.sub-hero {
+    height: 65vh;
+    width: 100%;
+    background: #c00c3f url('../images/contents/lgd_img_top.jpeg') no-repeat center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8rem;
+
+    .page-title {
+        color: #fff;
+        font-size: 5rem;
+        text-align: center;
+        padding: 5rem;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(12.1px);
+        -webkit-backdrop-filter: blur(12.1px);
+        letter-spacing: -0.01em;
+        h3{
+             letter-spacing: -0.03em;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+    }
+
+}
+
