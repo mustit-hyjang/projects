@@ -7,6 +7,22 @@
 */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Roboto:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+@font-face {
+  font-family: "NanumSquareRoundR";
+  src: url("../fonts/NanumSquareRoundR.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NanumSquareRoundB";
+  src: url("../fonts/NanumSquareRoundB.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*
     @ Filename       : reset.css
     @ Author         
@@ -627,46 +643,6 @@ img {
   }
 }
 
-.sub-hero {
-  height: 65vh;
-  width: 100%;
-  background: #c00c3f url("../images/contents/lgd_img_top.jpeg") no-repeat center/cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 8rem;
-}
-
-.sub-hero .page-title {
-  color: #fff;
-  font-size: 5rem;
-  text-align: center;
-  padding: 5rem;
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 16px;
-  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12.1px);
-  -webkit-backdrop-filter: blur(12.1px);
-  letter-spacing: -0.01em;
-}
-
-.sub-hero .page-title h3 {
-  letter-spacing: -0.03em;
-}
-
-.sub-hero .page-title p {
-  font-size: 1.5rem;
-  margin-top: 10px;
-}
-
 [role="tablist"] {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -989,6 +965,11 @@ header .btn-change-theme {
   color: #999;
 }
 
+.featured-project-list .pjt-item_description .client {
+  color: #999;
+  font-size: 11px;
+}
+
 .featured-project-list .pjt-item_description .skills {
   margin-top: 1.5rem;
   font-size: 1.1rem;
@@ -1228,5 +1209,84 @@ header .btn-change-theme {
   -webkit-transition: 0.8s 0.3s;
   transition: 0.8s 0.3s;
   margin-top: 4rem;
+}
+
+.modal-layer {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  display: none;
+  overflow: hidden;
+}
+
+.modal-layer-inner {
+  width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  min-height: 70vh;
+  overflow: auto;
+  z-index: 3000;
+  background: #fff;
+  border-radius: 5rem;
+  padding: 5rem;
+}
+
+.modal-layer-inner .modal-close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 4rem;
+  top: 4rem;
+  background: url("../images/ic_close_modal.svg") no-repeat center/40px;
+  cursor: pointer;
+}
+
+.modal-layer-inner .title {
+  font-size: 2rem;
+  font-family: 'NanumSquareRoundB' , sans-serif;
+}
+
+.modal-layer-inner .desc {
+  margin-top: 2rem;
+}
+
+.modal-layer-inner .desc li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-layer-inner .desc p {
+  width: calc(100% - 60px);
+}
+
+.modal-layer-inner .desc p:first-child {
+  width: 60px;
+}
+
+.modal-layer-inner .desc2-text {
+  margin-top: 3rem;
+  color: #999;
+}
+
+.modal-layer-inner .modal-content {
+  padding-top: 5rem;
+  border-top: 1px solid #222;
+  margin-top: 3rem;
+  overflow: auto;
+  height: calc(70vh - 100px);
 }
 /*# sourceMappingURL=intro.css.map */

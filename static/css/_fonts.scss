@@ -9,7 +9,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Roboto:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
 
-// @include font-face("Noto Sans KR", "../fonts/NotoSansKR-Regular", $style:normal, $weight:normal);
-// font-family: 'Noto Sans KR', sans-serif;
-// font-family: 'Roboto', sans-serif;
+ @include font-face("NanumSquareRoundR", "../fonts/NanumSquareRoundR", $style:normal, $weight:normal);
+ @include font-face("NanumSquareRoundB", "../fonts/NanumSquareRoundB", $style:normal, $weight:normal);
+
+ //e.g ) @include font-face("MyFont", "path/to/MyFont", $style: normal, $weight: normal);
+
+@mixin squareR {
+    font-family: 'NanumSquareRoundR' , sans-serif;
+}
+
+@mixin squareB {
+    font-family: 'NanumSquareRoundB' , sans-serif;
+}
 

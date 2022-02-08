@@ -1018,100 +1018,121 @@ function openModalLayer(layerID, origin) {
 }
 
 
-	
 //MODAL 
 let btns_modal = document.querySelectorAll('.open-modal');
+let notes = {
+	title: '',
+	desc: '',
+	contr: '',
+	link: ''
+}
 btns_modal.forEach(function (target) {
 
-    target.addEventListener('click', (e) => {
-        let btnOpenModal = e.target;
+	target.addEventListener('click', (e) => {
+		let btnOpenModal = e.target;
 
-        let modalID = btnOpenModal.getAttribute('aria-controls');
-        let modalIDChar = document.getElementById(modalID);
-        let modalClose = modalIDChar.getElementsByClassName('modal-close')[0];
-        let tabAble = modalIDChar.querySelectorAll('button:not([tabindex="-1"], input:not([tabindex="-1"], textarea:not([tabindex="-1"]');
-        let tabAbleFirst = tabAble && tabAble[0];
-        let tabAbleLast = tabAble && tabAble[tabAble.length - 1];
-        let tabDisable;
+		let modalID = btnOpenModal.getAttribute('aria-controls');
+		let modalIDChar = document.getElementById(modalID);
+		let modalClose = modalIDChar.getElementsByClassName('modal-close')[0];
+		let tabAble = modalIDChar.querySelectorAll('button:not([tabindex="-1"], input:not([tabindex="-1"], textarea:not([tabindex="-1"]');
+		let tabAbleFirst = tabAble && tabAble[0];
+		let tabAbleLast = tabAble && tabAble[tabAble.length - 1];
+		let tabDisable;
+		let modalContent = modalIDChar.querySelector('.modal-layer-inner');
 
-        //IOS 스크롤현상 수정 
-        // var iosScrollFixPosition = window.pageYOffset;
-        // document.body.offsetTop(iosScrollFixPosition); 
+		//IOS 스크롤현상 수정 
+		// var iosScrollFixPosition = window.pageYOffset;
+		// document.body.offsetTop(iosScrollFixPosition); 
 
-        //OPEN
-        modalIDChar.setAttribute('aria-hidden', 'false');
-        modalIDChar.classList.add('on');
+		//OPEN
+		modalIDChar.setAttribute('aria-hidden', 'false');
+		modalIDChar.classList.add('on');
 
-        if (tabAble) {
-            tabAbleFirst.focus();
+		let data_model = `[data-modal="${modalID}"]`;
+		let outer = document.querySelector(data_model);
 
-            tabAble.forEach((idx) => {
-                idx.addEventListener('keydown', (event) => {
-                    if (event.shiftKey && (event.keyCode || event.which) == 9) {
-                        event.preventDefault();
-                        tabAbleLast.focus();
-                    }
 
-                    //ESCAPE 닫기
-                    if ((event.keyCode || event.which) == 27) {
-                        event.preventDefault();
-                        console.log('esc');
-                        closeModal(modalIDChar, btnOpenModal);
-                    }
+		for (let i = 0; i < outer.childNodes.length; i++) {
+			if (outer.childNodes[i].innerHTML) {
+				notes.title = outer.querySelector('.pjt-title').innerHTML;
+				notes.desc = outer.querySelector('.pjt-detail').innerHTML;
+				notes.contr = outer.querySelector('.pjt-contribute').innerHTML;
+				notes.link = outer.querySelector('.link').innerHTML;
+			}
+		}
 
-                    //마지막요소에서 - 첫번째 요소로 포커스 이동 
-                    if (idx == tabAbleLast) {
-                        event.preventDefault();
-                        tabAbleFirst.focus();
-                    }
-                })
-            });
+		modalContent.querySelector('.title').innerHTML = `${notes.title}`
+		modalContent.querySelector('.title').innerHTML = `${notes.title}`
+		modalContent.querySelector('.link').innerHTML = `${notes.link}`
 
-            //CLOSE ( SPACE & ENTER)
-            modalClose.addEventListener('keydown', (event) => {
-                event.preventDefault();
-                if ((event.keyCode || event.which) === 13 || (event.keyCode || event.which) == 32) {
-                    closeModal(modalIDChar, btnOpenModal);
-                }
-            });
-            //닫기버튼 클릭
-            modalClose.addEventListener('click', (event) => {
-                event.preventDefault();
-                closeModal(modalIDChar, btnOpenModal);
-            });
-        }
+		if (tabAble) {
+			tabAbleFirst.focus();
 
-        //모달 외부 배경(dimm) 클릭시 닫기
-        modalIDChar.addEventListener('click', (e) => {
-            if (e.target === e.currentTarget) {
-                closeModal(modalIDChar, btnOpenModal);
-            }
-        })
-    });
+			tabAble.forEach((idx) => {
+				idx.addEventListener('keydown', (event) => {
+					if (event.shiftKey && (event.keyCode || event.which) == 9) {
+						event.preventDefault();
+						tabAbleLast.focus();
+					}
 
-    //RESIZE (픽셀깨지는 현상 수정)
-    window.addEventListener('resize', modalResize);
+					//ESCAPE 닫기
+					if ((event.keyCode || event.which) == 27) {
+						event.preventDefault();
+						console.log('esc');
+						closeModal(modalIDChar, btnOpenModal);
+					}
 
-    function closeModal(modalID, focusOrigin) {
-        modalID.setAttribute('tab-index', -1);
-        modalID.setAttribute('aria-hidden', 'true');
-        modalID.classList.remove('on');
-        focusOrigin.focus();
-    }
+					//마지막요소에서 - 첫번째 요소로 포커스 이동 
+					if (idx == tabAbleLast) {
+						event.preventDefault();
+						tabAbleFirst.focus();
+					}
+				})
+			});
 
-    function modalResize() {
-        //~_~;; 
-    }
+			//CLOSE ( SPACE & ENTER)
+			modalClose.addEventListener('keydown', (event) => {
+				event.preventDefault();
+				if ((event.keyCode || event.which) === 13 || (event.keyCode || event.which) == 32) {
+					closeModal(modalIDChar, btnOpenModal);
+				}
+			});
+			//닫기버튼 클릭
+			modalClose.addEventListener('click', (event) => {
+				event.preventDefault();
+				closeModal(modalIDChar, btnOpenModal);
+			});
+		}
+
+		//모달 외부 배경(dimm) 클릭시 닫기
+		modalIDChar.addEventListener('click', (e) => {
+			if (e.target === e.currentTarget) {
+				closeModal(modalIDChar, btnOpenModal);
+			}
+		})
+	});
+
+	//RESIZE (픽셀깨지는 현상 수정)
+	window.addEventListener('resize', modalResize);
+
+	function closeModal(modalID, focusOrigin) {
+		modalID.setAttribute('tab-index', -1);
+		modalID.setAttribute('aria-hidden', 'true');
+
+		modalID.classList.remove('on');
+		focusOrigin.focus();
+	}
+
+	function modalResize() {
+		//~_~;; 
+	}
+
+
+	function pushContentHtml() {
+
+
+	}
 });
-
-
-
-
-
-
-
-
-
 
 
 
