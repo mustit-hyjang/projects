@@ -1020,12 +1020,6 @@ function openModalLayer(layerID, origin) {
 
 //MODAL 
 let btns_modal = document.querySelectorAll('.open-modal');
-let notes = {
-	title: '',
-	desc: '',
-	contr: '',
-	link: ''
-}
 btns_modal.forEach(function (target) {
 
 	target.addEventListener('click', (e) => {
@@ -1048,22 +1042,6 @@ btns_modal.forEach(function (target) {
 		modalIDChar.setAttribute('aria-hidden', 'false');
 		modalIDChar.classList.add('on');
 
-		let data_model = `[data-modal="${modalID}"]`;
-		let outer = document.querySelector(data_model);
-
-
-		for (let i = 0; i < outer.childNodes.length; i++) {
-			if (outer.childNodes[i].innerHTML) {
-				notes.title = outer.querySelector('.pjt-title').innerHTML;
-				notes.desc = outer.querySelector('.pjt-detail').innerHTML;
-				notes.contr = outer.querySelector('.pjt-contribute').innerHTML;
-				notes.link = outer.querySelector('.link').innerHTML;
-			}
-		}
-
-		modalContent.querySelector('.title').innerHTML = `${notes.title}`
-		modalContent.querySelector('.title').innerHTML = `${notes.title}`
-		modalContent.querySelector('.link').innerHTML = `${notes.link}`
 
 		if (tabAble) {
 			tabAbleFirst.focus();
@@ -1128,10 +1106,6 @@ btns_modal.forEach(function (target) {
 	}
 
 
-	function pushContentHtml() {
-
-
-	}
 });
 
 

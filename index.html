@@ -8,6 +8,7 @@
 	<meta name="format-detection" content="telephone=yes">
 	<title>Welcome Capital</title>
 	<link rel="shortcut icon" type="image/png" href="static/images/icon/favicon.png" />
+	<link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.css">
 	<link rel="stylesheet" href="static/css/intro.css">
 </head>
 
@@ -480,9 +481,11 @@
 		</div>
 	</section>
 
-
 	<div id="modal01" class="modal-layer" role="dialog" aria-modal="true" aria-labelledby="약관동의 팝업"
 		aria-describedby="dialog4_desc" aria-hidden="true">
+		<p class="modal-control-help">
+			Press ESC or 'X' button to close this modal.❤
+		</p>
 		<div class="modal-layer-inner">
 			<h3 class="title">웰컴캐피탈</h3>
 			<ul class="desc">
@@ -498,12 +501,7 @@
 
 			<p class="desc2-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet repellat quasi adipisci et, molestias incidunt, totam sed, deserunt laboriosam culpa eum ipsum voluptatum rerum omnis illum reprehenderit? Velit, dignissimos accusantium?</p>
 			<div class="modal-content">
-				<img src="static/images/ui_image_01.png" alt="">
-				<img src="static/images/ui_image_01.png" alt="">
-				<img src="static/images/ui_image_01.png" alt="">
-				<img src="static/images/ui_image_01.png" alt="">
-				<img src="static/images/ui_image_01.png" alt="">
-				<img src="static/images/ui_image_01.png" alt="">
+				<img src="static/images/contents/lgd_detail.png" alt="LGdisplay contents">
 			</div>
 			<div class="modal-footer">
 				<button type="button" aria-disabled="true" role="button" tabindex="-1"></button>
@@ -515,8 +513,22 @@
 
 	<script src="static/js/jquery-1.12.1.min.js"></script>
 	<script src="static/js/jquery-migrate-1.4.1.min.js"></script>
-	<!-- <script src="static/js/wai-aria.ui.es5.js"></script>
-	<script src="static/js/front.js"></script> -->
+	<script src="static/js/wai-aria.ui.es5.js"></script>
+	<script src="static/js/jquery.mCustomScrollbar.min.js"></script>
+	<script src="static/js/front.js"></script>
+	<script>
+
+		(() => { 
+			console.log('d');
+			$(".modal-layer-inner").mCustomScrollbar({
+				theme:"dark-thin", 
+				axis:"y"
+			});
+			console.log('d2');
+		})(); 
+	
+	</script>
+
 </body>
 
 </html>

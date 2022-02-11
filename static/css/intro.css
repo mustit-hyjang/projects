@@ -1223,29 +1223,41 @@ header .btn-change-theme {
   overflow: hidden;
 }
 
+.modal-control-help {
+  position: fixed;
+  top: 3rem;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0;
+}
+
 .modal-layer-inner {
-  width: 800px;
+  width: 1000px;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   position: absolute;
-  min-height: 70vh;
-  overflow: auto;
+  height: 85vh;
   z-index: 3000;
   background: #fff;
   border-radius: 5rem;
-  padding: 5rem;
+  padding: 8rem 3rem 5rem 4rem;
 }
 
 .modal-layer-inner .modal-close {
-  position: absolute;
+  position: fixed;
   width: 40px;
   height: 40px;
-  right: 4rem;
+  right: 2rem;
+  z-index: 2;
   top: 4rem;
-  background: url("../images/ic_close_modal.svg") no-repeat center/40px;
+  background: #fff url("../images/ic_close_modal.svg") no-repeat center/40px;
   cursor: pointer;
 }
 
@@ -1286,7 +1298,5 @@ header .btn-change-theme {
   padding-top: 5rem;
   border-top: 1px solid #222;
   margin-top: 3rem;
-  overflow: auto;
-  height: calc(70vh - 100px);
+  height: calc(100% - 100px);
 }
-/*# sourceMappingURL=intro.css.map */
