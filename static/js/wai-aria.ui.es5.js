@@ -222,16 +222,16 @@ var waiAriaCheckBox = function waiAriaCheckBox() {
 	});
 
 	function checkBoxEvent(target) {
-		
+
 		if (target.hasAttribute("aria-controls")) {
 			var restBoxes = target.getAttribute("aria-controls").split(" ");
 			var checkedBoxes = 0;
 			var allChecked = false;
-			
+
 			for (var i = 0; i < restBoxes.length; i++) {
 				var singleBox = document.getElementById(restBoxes[i]);
 				checkedBoxes = singleBox.getAttribute("aria-checked") == "true" ? checkedBoxes = checkedBoxes + 1 : checkedBoxes;
-				allChecked = checkedBoxes == restBoxes.length ? "true" : "false";	
+				allChecked = checkedBoxes == restBoxes.length ? "true" : "false";
 			}
 			if (allChecked === 'true') {
 				for (var _i = 0; _i < restBoxes.length; _i++) {
@@ -488,7 +488,7 @@ var waiAriaSlider = function waiAriaSlider() {
 	function sliderMouseEvent(slideTo, slider, sliderWrap, maxVal, e, mouseMove) {
 		var sliderWidth = slideTo && slideTo == "vertical" ? slider.offsetHeight : slider.offsetWidth;
 		var wrapWidth = slideTo && slideTo == "vertical" ? sliderWrap.offsetHeight : sliderWrap.offsetWidth;
-		var wrapPos = slideTo && slideTo == "vertical" ? sliderWrap.getBoundingClientRect().top : sliderWrap.getBoundingClientRect().left;
+		var wrapPos = slideTo && slideTo == "vertical" ? sliderWrap.getBoundingproject-list__item__desc__clientRect().top : sliderWrap.getBoundingproject-list__item__desc__clientRect().left;
 		var mousePos = slideTo && slideTo == "vertical" ? e.pageY : e.pageX;
 		var leftPos = mousePos - wrapPos < 0 ? 0 : mousePos - wrapPos > wrapWidth ? wrapWidth : mousePos - wrapPos;
 		var nowVal = Math.round(leftPos * (maxVal / wrapWidth));
@@ -1018,12 +1018,15 @@ function openModalLayer(layerID, origin) {
 }
 
 
+
+
 //MODAL 
 let btns_modal = document.querySelectorAll('.open-modal');
 btns_modal.forEach(function (target) {
 
 	target.addEventListener('click', (e) => {
 		let btnOpenModal = e.target;
+		e.preventDefault();
 
 		let modalID = btnOpenModal.getAttribute('aria-controls');
 		let modalIDChar = document.getElementById(modalID);
@@ -1032,15 +1035,32 @@ btns_modal.forEach(function (target) {
 		let tabAbleFirst = tabAble && tabAble[0];
 		let tabAbleLast = tabAble && tabAble[tabAble.length - 1];
 		let tabDisable;
-		let modalContent = modalIDChar.querySelector('.modal-layer-inner');
+		let modalContent = modalIDChar.querySelector('.modal__inner');
 
 		//IOS 스크롤현상 수정 
 		// var iosScrollFixPosition = window.pageYOffset;
 		// document.body.offsetTop(iosScrollFixPosition); 
 
+
 		//OPEN
 		modalIDChar.setAttribute('aria-hidden', 'false');
 		modalIDChar.classList.add('on');
+
+		let modalContentID = btnOpenModal.getAttribute('data-content');
+		console.log(modalContentID);
+
+		
+		$.getJSON('https://2360f3c6-6a24-4459-bbbd-365dc21ae382.mock.pstmn.io/projectContent', function (data) {
+			console.log(data);
+			//console.log(data[modalContentID]);
+			//console.log(data[modalContentID][0].modal__inner__title);
+			modalIDChar.querySelector('.modal__inner__title').innerHTML = data[modalContentID][0].modal__inner__title; 
+			modalIDChar.querySelector('.project-list__item__desc__client').innerHTML = data[modalContentID][0].project-list__item__desc__client; 
+			modalIDChar.querySelector('.link').innerHTML = data[modalContentID][0].link; 
+			modalIDChar.querySelector('.desc2-text').innerHTML = data[modalContentID][0].desc; 
+			//modalIDChar.querySelector('.modal__inner__title').innerHTML = data[modalContentID][0].modal__inner__title; 
+			
+		});
 
 
 		if (tabAble) {
@@ -1107,7 +1127,3 @@ btns_modal.forEach(function (target) {
 
 
 });
-
-
-
-
