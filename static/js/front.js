@@ -93,6 +93,34 @@ window.addEventListener('resize', () => {
 });
 
 
+var FADE_DURATION = 800;
+var startTime = -1.0;
+
+function render(currTime) {
+	var rafObject = document.querySelector('.loading');
+
+	var opacity = 1 - (currTime / FADE_DURATION);
+	rafObject.style.opacity = opacity;
+
+	console.log(opacity);
+}
+
+function eachFrame() {
+	var timeRunning = (new Date()).getTime() - startTime;
+	if (startTime < 0) {
+		startTime = (new Date()).getTime();
+		render(0.0);
+	} else if (timeRunning < FADE_DURATION) {
+		render(timeRunning);
+	} else {
+		return;
+	}
+	window.requestAnimationFrame(eachFrame);
+};
+
+
+
+
 const projectList = document.querySelector('.project-list');
 async function getData() {
 	const requestURL = 'https://db59027a-d514-4e31-bdc3-e916f52fd0bd.mock.pstmn.io/projectList';
@@ -103,16 +131,16 @@ async function getData() {
 	dataLength = Object.keys(projectData).length;
 
 	renderElements(projectData);
-	if(projectData) {
+	if (projectData) {
 		setTimeout(() => {
 			console.log('done');
-			//document.querySelector('.loading').style.display ="none";
-			$('.loading').stop().fadeOut(400); 
+			window.requestAnimationFrame(eachFrame);
 		}, 1000);
 	}
 }
 
 getData();
+
 function renderElements(projectData) {
 	for (var key in projectData) {
 		if (projectData.hasOwnProperty(key)) {
@@ -182,7 +210,7 @@ const ariaModal = function ariaModal(projectData) {
 				modalIDChar.querySelector('.data-desc').innerHTML = element.desc;
 				modalIDChar.querySelector('.modal__inner__content').innerHTML = `<img src="${element.img}" />`
 			});
-		
+
 
 			if (tabAble) {
 				tabAbleFirst.focus();
@@ -324,3 +352,5 @@ var waiAriaTab = function waiAriaTab() {
 		});
 	});
 };
+
+
