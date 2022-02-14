@@ -1,3 +1,11 @@
+/**
+
+	front.js 
+	writer :  sora jeong
+	modified history 
+	  ㄴ 2022.02.14 adding project list item (json)
+
+*/
 if (window.NodeList && !NodeList.prototype.forEach) {
 	NodeList.prototype.forEach = Array.prototype.forEach;
 }
@@ -83,168 +91,161 @@ window.addEventListener('resize', () => {
 	vh = window.innerHeight * 0.01;
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
-// window.addEventListener('scroll', (e) => {
-// 	yOffset = window.pageYOffset;
-
-// });
 
 
-var projectData;
-$.getJSON('https://2360f3c6-6a24-4459-bbbd-365dc21ae382.mock.pstmn.io/projectContent', function (data) {
-	projectData = data;
+const projectList = document.querySelector('.project-list');
+async function getData() {
+	const requestURL = 'https://db59027a-d514-4e31-bdc3-e916f52fd0bd.mock.pstmn.io/projectList';
+	const request = new Request(requestURL);
+	const response = await fetch(request);
+	const projectData = await response.json();
 
-	let listData = document.querySelectorAll('.project-list__item');
-	listData.forEach((item) => {
-		let idx = item.getAttribute('data-item');
-		let obj = projectData[`${idx}`][0];
+	dataLength = Object.keys(projectData).length;
 
+	renderElements(projectData);
+	if(projectData) {
+		setTimeout(() => {
+			console.log('done');
+			//document.querySelector('.loading').style.display ="none";
+			$('.loading').stop().fadeOut(400); 
+		}, 1000);
+	}
+}
 
-
-		item.querySelector('.project-list__item__title').innerHTML = obj.title;
-		item.querySelector('.project-list__item__detail').innerHTML = obj.desc;
-		item.querySelector('.project-list__item__client').innerHTML = obj.client;
-		item.querySelector('.project-list__item__contribute > strong').innerHTML = obj.contritube;
-		item.querySelector('.project-list__item__skills').innerHTML = obj.skill;
-
-		/*
-		if (obj.skill == 'responsive') {
-			item.querySelector('.project-list__item__skills').innerHTML = `<span class="rwd">responsive</span>`;
-		} else if (obj.skill == 'app') {
-			item.querySelector('.project-list__item__skills').innerHTML = `<span class="app">app</span>`;
-		}
-		 */
-	});
-
-
-	/*
+getData();
+function renderElements(projectData) {
 	for (var key in projectData) {
-		// console.log(key);
-		// console.log(projectData[key][0].thumb);
+		if (projectData.hasOwnProperty(key)) {
 
+			projectData[key].forEach(element => {
+				let temp = element.skill.split(',');
+				let test = '';
+				for (let i = 0; i < temp.length; i++) {
+					test += `<span class="${temp[i]}">${temp[i]}</span>`
+				}
 
-		if (projectData[key][0].skill == 'responsive') {
-			console.log('res');
-			
+				projectList.innerHTML += `<div class="project-list__item" data-item ="${key}">
+					<div class="project-list__item__thumb">
+						<img src="${element.thumb}" alt="thumb">
+						<a href="#" class="open-modal" aria-controls="modal01" data-content="${key}"></a>
+					</div>
+					<p class="project-list__item__title">${element.title}</p>
+					<p class="project-list__item__detail">${element.desc}</p>
+					<p class="project-list__item__client">${element.client}</p>
+					<p class="project-list__item__contribute">${element.contritube}</p>
+					<p class="project-list__item__skills">${test}</p>
+				</div>`;
+
+			});
 		}
-
-		$('.project-list').append(`
-			<div class="project-list__item" data-item="${key}">
-				<div class="project-list__item__thumb">
-					${projectData[key][0].thumb}
-					<a href="#" class="open-modal" aria-controls="modal01" data-content="${key}"></a>
-				</div>
-
-				<p class="project-list__item__title">${projectData[key][0].title}</p>
-				<p class="project-list__item__detail">${projectData[key][0].desc}</p>
-				<p class="project-list__item__client">${projectData[key][0].client}</p>
-				<p class="project-list__item__contribute"><span>기여도</span> <strong>${projectData[key][0].contritube}</strong></p>
-				<p class="project-list__item__skills">${projectData[key][0].skill}</p>
-			</div>
-
-		`)
-	} */
-});
+	}
+	ariaModal(projectData);
+}
 
 
+const ariaModal = function ariaModal(projectData) {
+	//MODAL 
+	let btns_modal = document.querySelectorAll('.open-modal');
+	console.log(btns_modal);
+	btns_modal.forEach(function (target) {
 
-//MODAL 
-let btns_modal = document.querySelectorAll('.open-modal');
-btns_modal.forEach(function (target) {
+		target.addEventListener('click', (e) => {
+			let btnOpenModal = e.target;
+			console.log('click');
+			e.preventDefault();
 
-	target.addEventListener('click', (e) => {
-		let btnOpenModal = e.target;
-		console.log('click');
-		e.preventDefault();
+			let modalID = btnOpenModal.getAttribute('aria-controls');
+			let modalIDChar = document.getElementById(modalID);
+			let modalClose = modalIDChar.getElementsByClassName('modal-close')[0];
+			let tabAble = modalIDChar.querySelectorAll('button:not([tabindex="-1"], input:not([tabindex="-1"], textarea:not([tabindex="-1"]');
+			let tabAbleFirst = tabAble && tabAble[0];
+			let tabAbleLast = tabAble && tabAble[tabAble.length - 1];
+			let tabDisable;
+			let modalContent = modalIDChar.querySelector('.modal__inner');
 
-		let modalID = btnOpenModal.getAttribute('aria-controls');
-		let modalIDChar = document.getElementById(modalID);
-		let modalClose = modalIDChar.getElementsByClassName('modal-close')[0];
-		let tabAble = modalIDChar.querySelectorAll('button:not([tabindex="-1"], input:not([tabindex="-1"], textarea:not([tabindex="-1"]');
-		let tabAbleFirst = tabAble && tabAble[0];
-		let tabAbleLast = tabAble && tabAble[tabAble.length - 1];
-		let tabDisable;
-		let modalContent = modalIDChar.querySelector('.modal__inner');
-
-		//IOS 스크롤현상 수정 
-		// var iosScrollFixPosition = window.pageYOffset;
-		// document.body.offsetTop(iosScrollFixPosition); 
+			//IOS 스크롤현상 수정 
+			// var iosScrollFixPosition = window.pageYOffset;
+			// document.body.offsetTop(iosScrollFixPosition); 
 
 
-		//OPEN
-		modalIDChar.setAttribute('aria-hidden', 'false');
-		modalIDChar.classList.add('on');
+			//OPEN
+			modalIDChar.setAttribute('aria-hidden', 'false');
+			modalIDChar.classList.add('on');
 
-		let modalContentID = btnOpenModal.getAttribute('data-content');
+			let modalContentID = btnOpenModal.getAttribute('data-content');
 
-		modalIDChar.querySelector('.data-title').innerHTML = projectData[modalContentID][0].title;
-		modalIDChar.querySelector('.data-client').innerHTML = projectData[modalContentID][0].client;
-		modalIDChar.querySelector('.data-link').innerHTML = projectData[modalContentID][0].link;
-		modalIDChar.querySelector('.data-desc').innerHTML = projectData[modalContentID][0].desc;
-		modalIDChar.querySelector('.modal__inner__content').innerHTML = projectData[modalContentID][0].img;
+			projectData[modalContentID].forEach(element => {
+				//console.log(element);
+				modalIDChar.querySelector('.data-title').innerHTML = element.title;
+				modalIDChar.querySelector('.data-client').innerHTML = element.client;
+				modalIDChar.querySelector('.data-link').innerHTML = element.link;
+				modalIDChar.querySelector('.data-desc').innerHTML = element.desc;
+				modalIDChar.querySelector('.modal__inner__content').innerHTML = `<img src="${element.img}" />`
+			});
+		
 
-		if (tabAble) {
-			tabAbleFirst.focus();
+			if (tabAble) {
+				tabAbleFirst.focus();
 
-			tabAble.forEach((idx) => {
-				idx.addEventListener('keydown', (event) => {
-					if (event.shiftKey && (event.keyCode || event.which) == 9) {
-						event.preventDefault();
-						tabAbleLast.focus();
-					}
+				tabAble.forEach((idx) => {
+					idx.addEventListener('keydown', (event) => {
+						if (event.shiftKey && (event.keyCode || event.which) == 9) {
+							event.preventDefault();
+							tabAbleLast.focus();
+						}
 
-					//ESCAPE 닫기
-					if ((event.keyCode || event.which) == 27) {
-						event.preventDefault();
+						//ESCAPE 닫기
+						if ((event.keyCode || event.which) == 27) {
+							event.preventDefault();
+							closeModal(modalIDChar, btnOpenModal);
+						}
+
+						//마지막요소에서 - 첫번째 요소로 포커스 이동 
+						if (idx == tabAbleLast) {
+							event.preventDefault();
+							tabAbleFirst.focus();
+						}
+					})
+				});
+
+				//CLOSE ( SPACE & ENTER)
+				modalClose.addEventListener('keydown', (event) => {
+					event.preventDefault();
+					if ((event.keyCode || event.which) === 13 || (event.keyCode || event.which) == 32) {
 						closeModal(modalIDChar, btnOpenModal);
 					}
+				});
+				//닫기버튼 클릭
+				modalClose.addEventListener('click', (event) => {
+					event.preventDefault();
+					closeModal(modalIDChar, btnOpenModal);
+				});
+			}
 
-					//마지막요소에서 - 첫번째 요소로 포커스 이동 
-					if (idx == tabAbleLast) {
-						event.preventDefault();
-						tabAbleFirst.focus();
-					}
-				})
-			});
-
-			//CLOSE ( SPACE & ENTER)
-			modalClose.addEventListener('keydown', (event) => {
-				event.preventDefault();
-				if ((event.keyCode || event.which) === 13 || (event.keyCode || event.which) == 32) {
+			//모달 외부 배경(dimm) 클릭시 닫기
+			modalIDChar.addEventListener('click', (e) => {
+				if (e.target === e.currentTarget) {
 					closeModal(modalIDChar, btnOpenModal);
 				}
-			});
-			//닫기버튼 클릭
-			modalClose.addEventListener('click', (event) => {
-				event.preventDefault();
-				closeModal(modalIDChar, btnOpenModal);
-			});
+			})
+		});
+
+		//RESIZE (픽셀깨지는 현상 수정)
+		window.addEventListener('resize', modalResize);
+
+		function closeModal(modalID, focusOrigin) {
+			modalID.setAttribute('tab-index', -1);
+			modalID.setAttribute('aria-hidden', 'true');
+
+			modalID.classList.remove('on');
+			focusOrigin.focus();
 		}
 
-		//모달 외부 배경(dimm) 클릭시 닫기
-		modalIDChar.addEventListener('click', (e) => {
-			if (e.target === e.currentTarget) {
-				closeModal(modalIDChar, btnOpenModal);
-			}
-		})
+		function modalResize() {
+			//~_~;; 
+		}
 	});
-
-	//RESIZE (픽셀깨지는 현상 수정)
-	window.addEventListener('resize', modalResize);
-
-	function closeModal(modalID, focusOrigin) {
-		modalID.setAttribute('tab-index', -1);
-		modalID.setAttribute('aria-hidden', 'true');
-
-		modalID.classList.remove('on');
-		focusOrigin.focus();
-	}
-
-	function modalResize() {
-		//~_~;; 
-	}
-
-
-});
+}
 
 // wai-aria tab ui
 var waiAriaTab = function waiAriaTab() {

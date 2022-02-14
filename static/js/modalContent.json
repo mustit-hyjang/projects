@@ -1,63 +1,14 @@
 
-{
-    "LGD" : [ 
+{   "WC" : [ 
         {
-             "title" : "LG디스플레이 웹진", 
-             "client" : "LG DISPLAY", 
-             "link" : "<a href='http://good.lgdisplay.com/' target='_blank'>good.lgdisplay.com</a>", 
-             "desc" :"LG디스플레이의 사내 웹진 GOOD의 디자인과 UI를 담당하여 작업하였습니다.", 
-             "img" : "<img src='static/images/contents/lgd_detail.png'/>", 
-             "contritube" : "100%", 
-             "skill" : "<span class='rwd'>responsive</span>", 
-             "thumb" : "<img src='static/images/thumb_lgd.png' /> " 
-        }
-    ], 
-     "LGD2" : [ 
-        {
-             "title" : "LG디스플레이 웹진 2022", 
-             "client" : "LG DISPLAY", 
-             "link" : "<a href='http://good.lgdisplay.com/' target='_blank'>good.lgdisplay.com</a>", 
-             "desc" :"2022년 신규리뉴얼되는 LG디스플레이의 신규웹진 리뉴얼", 
-             "img" : "<img src='static/images/contents/lgd2022_detail.png'/>", 
-              "contritube" : "100%", 
-             "skill" : "<span class='rwd'>responsive</span>", 
-               "thumb" : "<img src='static/images/thumb_lgd.png' /> " 
-        }
-    ], 
-     "WC" : [ 
-        {
-             "title" : "웰컴캐피탈 홈페이지 반응형", 
-             "client" : "WELCOME FND", 
-             "link" : "<a href='https://www.welcomecapital.com' target='_blank'>welcomecapital.com</a>", 
-             "desc" :"기업/신기술 금융여신전문금융, 웰컴캐피탈의 신규 반응형웹 구축", 
-             "img" : "<img src='static/images/contents/wc_detail.png'/>", 
-              "contritube" : "100%", 
-             "skill" : "<span class='rwd'>responsive</span>", 
-               "thumb" : "<img src='static/images/thumb_lgd.png' /> " 
-        }
-    ], 
-     "ENS" : [ 
-        {
-             "title" : "ENSystem APP", 
-             "client" : "ENSytem", 
-             "link" : "<a href='#none' target='_blank'>none</a>", 
-             "desc" :"Nature friendly company, ens의 신규 앱의 ui개발을 담당하였습니다. ", 
-             "img" : "<img src='static/images/contents/ens_detail.png'/>", 
-              "contritube" : "100%", 
-             "skill" : "<span class='app'>app</span>", 
-               "thumb" : "<img src='static/images/thumb_lgd.png' /> " 
-        }
-    ], 
-    "CELL" : [ 
-        {
-             "title" : "셀스미스", 
-             "client" : "셀스미스", 
-             "link" : "<a href='http://cell-smith.com/CELL/main.html' target='_blank'>cell-smith.com</a>", 
-             "desc" :"3차원 세포배양을 연구하는 기업, 셀스미스의 반응형웹 리뉴얼작업", 
-             "img" : "<img src='static/images/contents/cell_detail.png'/>", 
-              "contritube" : "100%", 
-             "skill" : "<span class='rwd'>responsive</span>", 
-               "thumb" : "<img src='static/images/thumb_lgd.png' /> " 
+            "title" : "웰컴캐피탈 홈페이지 반응형", 
+            "client" : "WELCOME FND", 
+            "link" : "<a href='https://www.welcomecapital.com' target='_blank'>welcomecapital.com</a>", 
+            "desc" :"기업/신기술 금융여신전문금융, 웰컴캐피탈의 신규 반응형웹 구축", 
+            "img" : "static/images/contents/wc_detaill.png", 
+            "contritube" : "100%", 
+            "skill" : "responsive ", 
+            "thumb" : "static/images/thumb_wc.png" 
         }
     ], 
     "LAO" : [ 
@@ -66,22 +17,155 @@
              "client" : "WELCOME FND", 
              "link" : "<a href='https://laos.welcomefg.co.kr/lao' target='_blank'>laos.welcomefg.co.kr</a>", 
              "desc" :"웰컴금융그룹의 해외법인 중 하나인 라오스 헤외법인 사이트의 리뉴얼 반응형 웹 구축 ", 
-             "img" : "<img src='static/images/contents/lao_detail.png'/>", 
+             "img" : "static/images/contents/lao_detaill.png", 
               "contritube" : "100%", 
-             "skill" : "<span class='rwd'>responsive</span>", 
-               "thumb" : "<img src='static/images/thumb_lgd.png' /> " 
+             "skill" : "responsive ", 
+               "thumb" : "static/images/thumb_lao.png" 
         }
     ],
+    "LGD" : [ 
+        {
+             "title" : "LG디스플레이 웹진", 
+             "client" : "LG DISPLAY", 
+             "link" : "<a href='http://good.lgdisplay.com/' target='_blank'>good.lgdisplay.com</a>", 
+             "desc" :"LG디스플레이의 사내 웹진 GOOD의 디자인과 UI를 담당하여 작업하였습니다.", 
+             "img" : "static/images/contents/lgd_detaill.png", 
+             "contritube" : "100%", 
+             "skill" : "responsive ", 
+             "thumb" : "static/images/thumb_lgd.png" 
+        }
+    ],
+    "ENS" : [ 
+        {
+             "title" : "ENSystem APP", 
+             "client" : "ENSytem", 
+             "link" : "<a href='#none' target='_blank'>none</a>", 
+             "desc" :"Nature friendly company, ens의 신규 앱의 ui개발을 담당하였습니다. ", 
+             "img" : "static/images/contents/ens_detaill.png", 
+              "contritube" : "100%", 
+             "skill" : "app", 
+               "thumb" : "static/images/thumb_ens.png" 
+        }
+    ],  
+     "LGD2" : [ 
+        {
+             "title" : "LG디스플레이 웹진 2022", 
+             "client" : "LG DISPLAY", 
+             "link" : "<a href='http://good.lgdisplay.com/' target='_blank'>good.lgdisplay.com</a>", 
+             "desc" :"2022년 신규리뉴얼되는 LG디스플레이의 신규웹진 리뉴얼", 
+             "img" : "static/images/contents/lgd2022_detaill.png", 
+              "contritube" : "100%", 
+             "skill" : "responsive ", 
+               "thumb" : "static/images/thumb_lgd2022.png" 
+        }
+    ], 
+    "CELL" : [ 
+        {
+             "title" : "셀스미스", 
+             "client" : "셀스미스", 
+             "link" : "<a href='http://cell-smith.com/CELL/main.html' target='_blank'>cell-smith.com</a>", 
+             "desc" :"3차원 세포배양을 연구하는 기업, 셀스미스의 반응형웹 리뉴얼작업", 
+             "img" : "static/images/contents/cell_detaill.png", 
+              "contritube" : "100%", 
+             "skill" : "responsive", 
+               "thumb" : "static/images/thumb_cell.png" 
+        }
+    ], 
     "LITTLEHOMELEARN" : [ 
         {
              "title" : "리틀홈런", 
              "client" : "아이스크림키즈", 
              "link" : "<a href='https://littlehome-learn.com/' target='_blank'>littlehome-learn.com</a>", 
              "desc" :"아이스크림키즈의 새로운 온오프라인 교육 서비스, 리틀홈런 반응형웹 신규 구축", 
-             "img" : "<img src='static/images/contents/little_detai.png'/>", 
+             "img" : "static/images/contents/little_detail.png", 
              "contritube" : "100%", 
-             "skill" : "<span class='rwd'>responsive</span>", 
-               "thumb" : "<img src='static/images/thumb_lgd.png' /> " 
+             "skill" : "responsive ", 
+               "thumb" : "static/images/thumb_little.png" 
         }
-    ]  
+    ], 
+    "TINPO" : [ 
+        {
+             "title" : "틴포 창의력발달검사", 
+             "client" : "아이스크림키즈", 
+             "link" : "", 
+             "desc" :"", 
+             "img" : "static/images/contents/tinpo_detail.png", 
+             "contritube" : "100%", 
+             "skill" : "app", 
+               "thumb" : "static/images/thumb_tinpo.png" 
+        }
+    ], 
+    "CAPSTONE" : [ 
+        {
+             "title" : "인제대학교 캡스톤디자인센터", 
+             "client" : "인제대학교", 
+             "link" : "", 
+             "desc" :"", 
+             "img" : "static/images/contents/tinpo_detail.png", 
+             "contritube" : "100%", 
+             "skill" : "app", 
+               "thumb" : "static/images/thumb_tinpo.png" 
+        }
+    ], 
+    "CHAEUM" : [ 
+        {
+             "title" : "인제대학교 캡스톤디자인센터", 
+             "client" : "인제대학교", 
+             "link" : "", 
+             "desc" :"", 
+             "img" : "static/images/contents/tinpo_detail.png", 
+             "contritube" : "100%", 
+             "skill" : "app", 
+               "thumb" : "static/images/thumb_tinpo.png" 
+        }
+    ], 
+    "STARPICKER" : [ 
+        {
+             "title" : "인제대학교 캡스톤디자인센터", 
+             "client" : "인제대학교", 
+             "link" : "", 
+             "desc" :"", 
+             "img" : "static/images/contents/tinpo_detail.png", 
+             "contritube" : "100%", 
+             "skill" : "app", 
+               "thumb" : "static/images/thumb_tinpo.png" 
+        }
+    ], 
+    "POEPLE" : [ 
+        {
+             "title" : "인제대학교 캡스톤디자인센터", 
+             "client" : "인제대학교", 
+             "link" : "", 
+             "desc" :"", 
+             "img" : "static/images/contents/tinpo_detail.png", 
+             "contritube" : "100%", 
+             "skill" : "app", 
+               "thumb" : "static/images/thumb_tinpo.png" 
+        }
+    ], 
+    "NEMODIVE" : [ 
+        {
+             "title" : "인제대학교 캡스톤디자인센터", 
+             "client" : "인제대학교", 
+             "link" : "", 
+             "desc" :"", 
+             "img" : "static/images/contents/tinpo_detail.png", 
+             "contritube" : "100%", 
+             "skill" : "app", 
+               "thumb" : "static/images/thumb_tinpo.png" 
+        }
+    ], 
+    "NURINORI" : [ 
+        {
+             "title" : "인제대학교 캡스톤디자인센터", 
+             "client" : "인제대학교", 
+             "link" : "", 
+             "desc" :"", 
+             "img" : "static/images/contents/tinpo_detail.png", 
+             "contritube" : "100%", 
+             "skill" : "app", 
+               "thumb" : "static/images/thumb_tinpo.png" 
+        }
+    ]
 }
+

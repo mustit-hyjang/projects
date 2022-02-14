@@ -4,7 +4,6 @@
 @import 'vars';
 
 
-
 $color-txt : #111;
 $color-primary: #e22f26;
 $color-secondary: #ff7a00;
@@ -434,3 +433,7 @@ $color-background:#fff;
         height: calc(100% - 100px);
     }
 }
+
+
+
+@import 'loading';

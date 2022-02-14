@@ -730,4 +730,42 @@ img {
   margin-top: 3rem;
   height: calc(100% - 100px);
 }
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #333;
+}
+
+.loading__container {
+  text-align: center;
+  width: 100%;
+  color: #fff;
+}
+
+.loading__img {
+  max-width: 70px;
+}
+
+.loading__txt {
+  font-size: 1.5rem;
+  line-height: 160%;
+}
+
+.loading__txt:first-of-type {
+  margin-top: 1rem;
+}
 /*# sourceMappingURL=intro.css.map */
