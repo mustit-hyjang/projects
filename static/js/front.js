@@ -92,35 +92,6 @@ window.addEventListener('resize', () => {
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
-
-var FADE_DURATION = 800;
-var startTime = -1.0;
-
-function render(currTime) {
-	var rafObject = document.querySelector('.loading');
-
-	var opacity = 1 - (currTime / FADE_DURATION);
-	rafObject.style.opacity = opacity;
-
-	console.log(opacity);
-}
-
-function eachFrame() {
-	var timeRunning = (new Date()).getTime() - startTime;
-	if (startTime < 0) {
-		startTime = (new Date()).getTime();
-		render(0.0);
-	} else if (timeRunning < FADE_DURATION) {
-		render(timeRunning);
-	} else {
-		return;
-	}
-	window.requestAnimationFrame(eachFrame);
-};
-
-
-
-
 const projectList = document.querySelector('.project-list');
 async function getData() {
 	const requestURL = 'https://db59027a-d514-4e31-bdc3-e916f52fd0bd.mock.pstmn.io/projectList';
@@ -131,12 +102,6 @@ async function getData() {
 	dataLength = Object.keys(projectData).length;
 
 	renderElements(projectData);
-	if (projectData) {
-		setTimeout(() => {
-			console.log('done');
-			window.requestAnimationFrame(eachFrame);
-		}, 1000);
-	}
 }
 
 getData();
