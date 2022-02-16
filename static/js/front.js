@@ -100,11 +100,13 @@ async function getData() {
 	const projectData = await response.json();
 
 	dataLength = Object.keys(projectData).length;
-	// if(!response.ok) {
-	// 	console.log('as');
-	// }
+	if(!response.ok) {
+		console.log('error');
+	}else {
+		$('.loading').stop().fadeOut(700);
+	}
 	
-	//if(projectData) $('.loading').stop().fadeOut(700);
+	
 	renderElements(projectData);
 }
 getData();
@@ -118,7 +120,7 @@ async function getData2() {
 	renderElements2(projectData2);
 
 }
-//getData2();
+getData2();
 
 function renderElements(projectData) {
 	for (let key in projectData) {
