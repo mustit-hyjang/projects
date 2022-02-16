@@ -694,6 +694,7 @@ img {
   text-overflow: ellipsis;
   text-align: center;
   height: auto;
+  margin-top: 1rem;
   white-space: unset;
 }
 

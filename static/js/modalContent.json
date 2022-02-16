@@ -46,7 +46,7 @@
         "desc": "2022년 신규리뉴얼되는 LG디스플레이의 신규웹진 리뉴얼",
         "img": "static/images/contents/lgd2022_detail.png",
         "contritube": "100%",
-        "skill": "responsive ",
+        "skill": "responsive,design",
         "thumb": "static/images/thumb_lgd2022.png"
     }],
     "CELL": [{
@@ -96,7 +96,7 @@
         "desc": "법무법인 채움의 웹디자인과 UI 동시 진행  ",
         "img": "static/images/contents/chaeum_detail.png",
         "contritube": "100%",
-        "skill": "responsive",
+        "skill": "responsive,design",
         "thumb": "static/images/thumb_chaeum.png"
     }],
     "STARPICKER": [{
@@ -126,7 +126,7 @@
         "desc": "필리핀 세부에 위치한 니모다이브센터의 신규 반응형 웹사이트 구축",
         "img": "static/images/contents/nemo_detail.png",
         "contritube": "100%",
-        "skill": "responsive",
+        "skill": "responsive,design",
         "thumb": "static/images/thumb_nemo.png"
     }],
     "NURINORI": [{
