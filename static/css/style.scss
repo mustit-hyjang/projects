@@ -226,6 +226,12 @@ $color-background:#fff;
     }
 }
 
+ .open-modal {
+     &::after {
+         
+     }
+ }
+
 .project-list {
     display: flex;
     width: 100%;
@@ -242,6 +248,7 @@ $color-background:#fff;
         color: #111;
         position: relative;
 
+       
         &:hover {
             .open-modal {
                 display: block;
@@ -251,6 +258,7 @@ $color-background:#fff;
                 width: 100%;
                 height: 100%;
                 background: rgba($color: #000000, $alpha: 0.5);
+                transition: 0.5s;
 
                 &::after {
                     content: 'VIEW DETAIL';
@@ -265,7 +273,7 @@ $color-background:#fff;
 
     &__item__thumb {
         width: 100%;
-        padding-bottom: 80%;
+        padding-bottom: 77%;
         position: relative;
         overflow: hidden;
 

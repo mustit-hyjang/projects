@@ -105,9 +105,8 @@ async function getData() {
 	} else {
 		$('.loading').hide();
 		setTimeout(() => {
-			//$('.loading').stop().fadeOut(700);
-			
-		}, 1000);
+			$('.loading').stop().fadeOut(700);
+		}, 1500);
 	}
 	
 	
