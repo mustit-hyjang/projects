@@ -548,7 +548,7 @@ img {
           transform: translate(-50%, -50%);
   max-width: initial;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .project-list__item__title {
@@ -627,6 +627,66 @@ img {
   color: #111;
   word-break: break-all;
   font-size: 1.3rem;
+}
+
+.project-list__item__detail a {
+  color: #fc5959;
+  padding-left: 5px;
+}
+
+.project-list.other-project-list .project-list__item {
+  width: 19%;
+  background: #f8f8f8;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.project-list.other-project-list .project-list__item__thumb {
+  background: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  height: 70px;
+  text-align: center;
+  line-height: 1.8;
+  font-weight: bold;
+  font-size: 1.4rem;
+  display: none;
+}
+
+.project-list.other-project-list .project-list__item__title {
+  margin-top: 0.7rem;
+  font-size: 1.4rem;
+  width: 100%;
+  font-weight: bold;
+}
+
+.project-list.other-project-list .project-list__item__detail {
+  font-size: 1.2rem;
+  margin-top: 0;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .proejct-top-img {
@@ -768,4 +828,4 @@ img {
 .loading__txt:first-of-type {
   margin-top: 1rem;
 }
-/*# sourceMappingURL=intro.css.map */
+/*# sourceMappingURL=style.css.map */

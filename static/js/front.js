@@ -68,8 +68,7 @@ function changeMode() {
 			btn_mode.click();
 			e.preventDefault();
 		}
-	})
-
+	});
 }
 
 //CUSTOM SCROLLBAR
@@ -92,7 +91,8 @@ window.addEventListener('resize', () => {
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
-const projectList = document.querySelector('.project-list');
+const projectList = document.querySelector('.main-project-list');
+const projectList2 = document.querySelector('.other-project-list');
 async function getData() {
 	const requestURL = 'https://db59027a-d514-4e31-bdc3-e916f52fd0bd.mock.pstmn.io/projectList';
 	const request = new Request(requestURL);
@@ -100,14 +100,28 @@ async function getData() {
 	const projectData = await response.json();
 
 	dataLength = Object.keys(projectData).length;
-
+	// if(!response.ok) {
+	// 	console.log('as');
+	// }
+	
+	//if(projectData) $('.loading').stop().fadeOut(700);
 	renderElements(projectData);
 }
-
 getData();
 
+async function getData2() {
+	const requestURL = 'https://db59027a-d514-4e31-bdc3-e916f52fd0bd.mock.pstmn.io/projectListOther';
+	const request = new Request(requestURL);
+	const response = await fetch(request);
+	const projectData2 = await response.json();
+	console.log(projectData2);
+	renderElements2(projectData2);
+
+}
+//getData2();
+
 function renderElements(projectData) {
-	for (var key in projectData) {
+	for (let key in projectData) {
 		if (projectData.hasOwnProperty(key)) {
 
 			projectData[key].forEach(element => {
@@ -136,15 +150,32 @@ function renderElements(projectData) {
 }
 
 
+function renderElements2(projectData2) {
+	//console.log(projectData2);
+	for (let key in projectData2) {
+		if (projectData2.hasOwnProperty(key)) {
+			projectData2[key].forEach(element => {
+
+				projectList2.innerHTML += `<div class="project-list__item" data-item ="${key}">
+					<div class="project-list__item__thumb">
+						${element.client}
+					</div>
+					<p class="project-list__item__title">${element.title}</p>
+					<p class="project-list__item__detail">${element.desc}</p>
+				</div>`;
+			});
+		}
+	}
+}
+
+
 const ariaModal = function ariaModal(projectData) {
 	//MODAL 
 	let btns_modal = document.querySelectorAll('.open-modal');
-	console.log(btns_modal);
 	btns_modal.forEach(function (target) {
 
 		target.addEventListener('click', (e) => {
 			let btnOpenModal = e.target;
-			console.log('click');
 			e.preventDefault();
 
 			let modalID = btnOpenModal.getAttribute('aria-controls');
@@ -154,7 +185,7 @@ const ariaModal = function ariaModal(projectData) {
 			let tabAbleFirst = tabAble && tabAble[0];
 			let tabAbleLast = tabAble && tabAble[tabAble.length - 1];
 			let tabDisable;
-			let modalContent = modalIDChar.querySelector('.modal__inner');
+			//let modalContent = modalIDChar.querySelector('.modal__inner');
 
 			//IOS 스크롤현상 수정 
 			// var iosScrollFixPosition = window.pageYOffset;
@@ -169,10 +200,10 @@ const ariaModal = function ariaModal(projectData) {
 
 			projectData[modalContentID].forEach(element => {
 				//console.log(element);
-				modalIDChar.querySelector('.data-title').innerHTML = element.title;
-				modalIDChar.querySelector('.data-client').innerHTML = element.client;
-				modalIDChar.querySelector('.data-link').innerHTML = element.link;
-				modalIDChar.querySelector('.data-desc').innerHTML = element.desc;
+				modalIDChar.querySelector('.modal__inner__title').innerHTML = element.title;
+				modalIDChar.querySelector('.modal__inner__desc-txt--client').innerHTML = element.client;
+				modalIDChar.querySelector('.modal__inner__desc-txt--link').innerHTML = element.link;
+				modalIDChar.querySelector('.modal__inner__description').innerHTML = element.desc;
 				modalIDChar.querySelector('.modal__inner__content').innerHTML = `<img src="${element.img}" />`
 			});
 
@@ -240,7 +271,6 @@ const ariaModal = function ariaModal(projectData) {
 	});
 }
 
-// wai-aria tab ui
 var waiAriaTab = function waiAriaTab() {
 	var tabs = document.querySelectorAll('[role="tab"]');
 	var tabLists = document.querySelectorAll('[role="tablist"]');

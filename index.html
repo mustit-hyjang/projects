@@ -9,10 +9,10 @@
 		<modal__inner__title>Welcome Capital</modal__inner__title>
 		<link rel="shortcut icon" type="image/png" href="static/images/icon/favicon.png" />
 		<link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.css">
-		<link rel="stylesheet" href="static/css/intro.css">
+		<link rel="stylesheet" href="static/css/style.css">
 	</head>
 
-	<body class="">
+	<body>
 
 		<header class="header">
 			<div class="header__container">
@@ -121,37 +121,42 @@
 		<div class="proejct-top-img"></div>
 
 		<h3 class="section-modal__inner__title"><span>Featured</span> </h3>
-		
-		<div class="project-list">
-
-		</div>
+		<!--PROJECT LIST json -->
+		<div class="main-project-list project-list" id="anchor-project"></div>
+		<!--//PROJECT LIST-->
 
 		<h3 class="section-modal__inner__title"><span>Others</span></h3>
-		<div class="other-product-list">
+		<div class="other-project-list project-list">
+		
 		</div>
+
+
+		<div class="contact" id="anchor-contact"></div>
 
 
 		<!--MODAL-->
 		<div id="modal01" class="modal" role="dialog" aria-modal="true" aria-labelledby="project preview"
-			aria-describedby="portfolio(project) detail" aria-hidden="true">
+			aria-describedby="project detail" aria-hidden="true">
 			<div class="modal__inner">
-				<h3 class="modal__inner__title data-title">타이틀</h3>
+				<h3 class="modal__inner__title">modal title</h3>
 				<ul class="modal__inner__desc">
 					<li>
 						<p class="modal__inner__desc-title">client</p>
-						<p class="modal__inner__desc-txt data-client ">lgdisplay</p>
+						<p class="modal__inner__desc-txt modal__inner__desc-txt--client ">text here</p>
 					</li>
 					<li>
 						<p class="modal__inner__desc-title">link</p>
-						<p class="modal__inner__desc-txt modal__inner__desc-txt--link data-link">lgdisplay.com</p>
+						<p class="modal__inner__desc-txt modal__inner__desc-txt--link">text here </p>
 					</li>
 				</ul>
 
-				<p class="modal__inner__description data-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				<p class="modal__inner__description">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 					Ad fugiat velit, officiis obcaecati commodi facilis nihil harum, totam assumenda libero voluptates
-					inventore qui! Nisi modi, asperiores unde distinctio aspernatur ex?</p>
+					inventore qui! Nisi modi, asperiores unde distinctio aspernatur ex?
+				</p>
 				<div class="modal__inner__content">
-					<img src="static/images/contents/lgd_detail.png" alt="LGdisplay contents">
+					<img src="img.png" alt="alt text">
 				</div>
 				<div class="modal-footer">
 					<button type="button" aria-disabled="true" role="button" tabindex="-1"></button>
@@ -162,7 +167,19 @@
 		</div>
 
 
-		<div class="loading" style="display: none;">
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="loading">
 			<div class="loading__container">
 				<img class="loading__img" src="static/images/loading.svg" alt="loading svg">
 				<p class="loading__txt">방문해 주신 홈페이지에서는 인터넷 익스플로러 브라우저 호환이 되지 않습니다.<p>
