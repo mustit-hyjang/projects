@@ -803,6 +803,7 @@ img {
   background: #444;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .contact__info li {
