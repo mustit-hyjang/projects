@@ -201,7 +201,7 @@ $color-background:#fff;
         &__detail {
             margin-top: 2rem;
 
-          
+
 
             li {
                 padding-left: 8px;
@@ -341,7 +341,7 @@ $color-background:#fff;
         font-size: 1.3rem;
 
         a {
-            color: #fc5959;
+            color: #DD5789;
             padding-left: 5px;
         }
     }
@@ -349,17 +349,18 @@ $color-background:#fff;
     &.other-project-list {
         .project-list__item {
             width: 19%;
-            background:#f8f8f8; 
+            background: rgb(237, 237, 237);
             text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            padding: 2rem; 
-            
+            padding: 2rem;
+            margin-bottom: 1rem;
+
 
             &__thumb {
-                background: #222; 
+                background: #222;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -383,7 +384,13 @@ $color-background:#fff;
                 font-size: 1.2rem;
                 margin-top: 0;
                 width: 100%;
-                @include ellipsis(100%); 
+                @include ellipsis(100%);
+                text-align: center;
+                height: auto;
+
+                a {
+                    display: block;
+                }
             }
         }
     }
@@ -484,5 +491,45 @@ $color-background:#fff;
 }
 
 
+
+.contact {
+    padding: 6rem 2rem;
+    background: #444;
+    text-align: center;
+    text-transform: uppercase;letter-spacing: 0.02em
+
+    &__info {
+        li {
+            position: relative;
+            display: inline-block;
+            color: #fff;
+            opacity: 0.8;
+            font-size: 1.2rem;
+            line-height: 1.5;
+
+            a {
+                color: #fff;
+            }
+
+
+            &:not(:first-child) {
+                &::before {
+                    content: '/';
+                    padding: 0 5px
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        font-size: 10px;
+        margin-top: 5px;
+        opacity: 0.5;
+        color:#fff;
+        
+
+
+    }
+}
 
 @import 'loading';
