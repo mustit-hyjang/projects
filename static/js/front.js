@@ -102,9 +102,11 @@ async function getData() {
 	dataLength = Object.keys(projectData).length;
 	if(!response.ok) {
 		console.log('error');
-	}else {
+	} else {
+		$('.loading').hide();
 		setTimeout(() => {
-			$('.loading').stop().fadeOut(700);
+			//$('.loading').stop().fadeOut(700);
+			
 		}, 1000);
 	}
 	

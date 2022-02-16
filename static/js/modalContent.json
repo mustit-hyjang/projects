@@ -4,7 +4,7 @@
         "client": "WELCOME FND",
         "link": "<a href='https://www.welcomecapital.com' target='_blank'>welcomecapital.com</a>",
         "desc": "기업/신기술 금융여신전문금융, 웰컴캐피탈의 신규 반응형웹 UI",
-        "img": "static/images/contents/wc_detaill.png",
+        "img": "static/images/contents/wc_detail.png",
         "contritube": "100%",
         "skill": "responsive ",
         "thumb": "static/images/thumb_wc.png"
@@ -14,7 +14,7 @@
         "client": "WELCOME FND",
         "link": "<a href='https://laos.welcomefg.co.kr/lao' target='_blank'>laos.welcomefg.co.kr</a>",
         "desc": "웰컴금융그룹의 해외법인 중 하나인 라오스 헤외법인 사이트의 리뉴얼, 반응형 웹 UI",
-        "img": "static/images/contents/lao_detaill.png",
+        "img": "static/images/contents/lao_detail.png",
         "contritube": "100%",
         "skill": "responsive ",
         "thumb": "static/images/thumb_lao.png"
@@ -24,7 +24,7 @@
         "client": "LG DISPLAY",
         "link": "<a href='http://good.lgdisplay.com/' target='_blank'>good.lgdisplay.com</a>",
         "desc": "LG디스플레이의 사내 웹진 GOOD의 디자인과 UI.",
-        "img": "static/images/contents/lgd_detaill.png",
+        "img": "static/images/contents/lgd_detail.png",
         "contritube": "100%",
         "skill": "responsive,design",
         "thumb": "static/images/thumb_lgd.png"
@@ -34,7 +34,7 @@
         "client": "ENSytem",
         "link": "<a href='#none' target='_blank'>none</a>",
         "desc": "Nature friendly company, ens의 신규 모바일앱 UI",
-        "img": "static/images/contents/ens_detaill.png",
+        "img": "static/images/contents/ens_detail.png",
         "contritube": "100%",
         "skill": "app",
         "thumb": "static/images/thumb_ens.png"
@@ -44,7 +44,7 @@
         "client": "LG DISPLAY",
         "link": "<a href='http://good.lgdisplay.com/' target='_blank'>good.lgdisplay.com</a>",
         "desc": "2022년 신규리뉴얼되는 LG디스플레이의 신규웹진 리뉴얼",
-        "img": "static/images/contents/lgd2022_detaill.png",
+        "img": "static/images/contents/lgd2022_detail.png",
         "contritube": "100%",
         "skill": "responsive ",
         "thumb": "static/images/thumb_lgd2022.png"
@@ -54,7 +54,7 @@
         "client": "셀스미스",
         "link": "<a href='http://cell-smith.com/CELL/main.html' target='_blank'>cell-smith.com</a>",
         "desc": "3차원 세포배양을 연구하는 기업, 셀스미스의 반응형웹 리뉴얼",
-        "img": "static/images/contents/cell_detaill.png",
+        "img": "static/images/contents/cell_detail.png",
         "contritube": "100%",
         "skill": "responsive",
         "thumb": "static/images/thumb_cell.png"

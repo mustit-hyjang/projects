@@ -678,6 +678,8 @@ img {
   font-size: 1.4rem;
   width: 100%;
   font-weight: bold;
+  height: auto;
+  word-break: keep-all;
 }
 
 .project-list.other-project-list .project-list__item__detail {
@@ -690,6 +692,7 @@ img {
   text-overflow: ellipsis;
   text-align: center;
   height: auto;
+  white-space: unset;
 }
 
 .project-list.other-project-list .project-list__item__detail a {

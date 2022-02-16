@@ -378,6 +378,9 @@ $color-background:#fff;
                 font-size: 1.4rem;
                 width: 100%;
                 font-weight: bold;
+                height: auto;
+                word-break: keep-all;
+
             }
 
             &__detail {
@@ -387,6 +390,7 @@ $color-background:#fff;
                 @include ellipsis(100%);
                 text-align: center;
                 height: auto;
+                                white-space: unset;
 
                 a {
                     display: block;
