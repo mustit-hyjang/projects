@@ -94,7 +94,7 @@ window.addEventListener('resize', () => {
 const projectList = document.querySelector('.main-project-list');
 const projectList2 = document.querySelector('.other-project-list');
 async function getData() {
-	const requestURL = 'https://publy-sora-jeong.github.io/sample/static/js/modalContent.json';
+	const requestURL = 'https://publy-sora-jeong.github.io/projects/static/js/modalContent.json';
 	const request = new Request(requestURL);
 	const response = await fetch(request);
 	const projectData = await response.json();
@@ -115,7 +115,7 @@ async function getData() {
 getData();
 
 async function getData2() {
-	const requestURL = 'https://publy-sora-jeong.github.io/sample/static/js/modalContentOther.json';
+	const requestURL = 'https://publy-sora-jeong.github.io/projects/static/js/modalContentOther.json';
 	const request = new Request(requestURL);
 	const response = await fetch(request);
 	const projectData2 = await response.json();
