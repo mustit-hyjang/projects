@@ -103,7 +103,7 @@ async function getData() {
 	if(!response.ok) {
 		console.log('error');
 	} else {
-		$('.loading').hide();
+		//$('.loading').hide();
 		setTimeout(() => {
 			$('.loading').stop().fadeOut(700);
 		}, 1500);
