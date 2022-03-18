@@ -119,7 +119,7 @@ async function getData2() {
 	const request = new Request(requestURL);
 	const response = await fetch(request);
 	const projectData2 = await response.json();
-	console.log(projectData2);
+	//console.log(projectData2);
 	renderElements2(projectData2);
 
 }
@@ -131,6 +131,7 @@ function renderElements(projectData) {
 
 			projectData[key].forEach(element => {
 				let temp = element.skill.split(',');
+				console.log(temp);
 				let test = '';
 				for (let i = 0; i < temp.length; i++) {
 					test += `<span class="${temp[i]}">${temp[i]}</span>`
