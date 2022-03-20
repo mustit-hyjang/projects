@@ -103,7 +103,7 @@ $color-background:#fff;
 }
 
 .hero {
-    padding: 18rem 0 8rem 0;
+    padding: 18rem 0 5rem 0;
     max-width: 1080px;
     @include push--auto;
 
@@ -123,6 +123,21 @@ $color-background:#fff;
         padding-right: 30%;
         word-break: keep-all;
         line-height: 1.6;
+    }
+
+    &__txt-descbox {
+        border: 1px solid #ddd;
+        background: #f9f9f9;
+        font-size: 0.9em;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 4px;
+        max-width: 550px;
+
+        a {
+            color: #004E93;
+            font-size: 0.9em;
+        }
     }
 
     &__txt-hi {
@@ -234,17 +249,31 @@ $color-background:#fff;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: space-between;
+
     padding-bottom: 10rem;
     max-width: 1080px;
     @include push--auto;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: stretch;
+    grid-gap: 20px 20px;
+    gap: 40px 20px;
+
+
 
     &__item {
         width: 31%;
         overflow: hidden;
-        margin-bottom: 3rem;
+        //margin-bottom: 3rem;
         color: #111;
         position: relative;
+        width: 31%;
+        overflow: hidden;
+        //margin-bottom: 3rem;
+        color: #111;
+        position: relative;
+        flex: 1 1 31%;
+        max-width: 31%;
 
 
         &:hover {
@@ -353,6 +382,9 @@ $color-background:#fff;
     }
 
     &.other-project-list {
+        gap: 20px 20px;
+
+
         .project-list__item {
             width: 19%;
             background: rgb(237, 237, 237);
@@ -362,8 +394,8 @@ $color-background:#fff;
             justify-content: center;
             flex-wrap: wrap;
             padding: 2rem;
-            margin-bottom: 1rem;
-
+            //margin-bottom: 1rem;
+            flex: 1 1 19%;
 
             &__thumb {
                 background: #222;

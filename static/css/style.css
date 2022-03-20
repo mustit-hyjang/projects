@@ -368,7 +368,7 @@ img {
 }
 
 .hero {
-  padding: 18rem 0 8rem 0;
+  padding: 18rem 0 5rem 0;
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
@@ -389,6 +389,21 @@ img {
   padding-right: 30%;
   word-break: keep-all;
   line-height: 1.6;
+}
+
+.hero__txt-descbox {
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  font-size: 0.9em;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  max-width: 550px;
+}
+
+.hero__txt-descbox a {
+  color: #004E93;
+  font-size: 0.9em;
 }
 
 .hero__txt-hi {
@@ -494,21 +509,36 @@ img {
   width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding-bottom: 10rem;
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  grid-gap: 20px 20px;
+  gap: 40px 20px;
 }
 
 .project-list__item {
   width: 31%;
   overflow: hidden;
-  margin-bottom: 3rem;
   color: #111;
   position: relative;
+  width: 31%;
+  overflow: hidden;
+  color: #111;
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 31%;
+          flex: 1 1 31%;
+  max-width: 31%;
 }
 
 .project-list__item:hover .open-modal {
@@ -635,6 +665,10 @@ img {
   padding-left: 5px;
 }
 
+.project-list.other-project-list {
+  gap: 20px 20px;
+}
+
 .project-list.other-project-list .project-list__item {
   width: 19%;
   background: #ededed;
@@ -651,7 +685,9 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 2rem;
-  margin-bottom: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 19%;
+          flex: 1 1 19%;
 }
 
 .project-list.other-project-list .project-list__item__thumb {
