@@ -398,12 +398,13 @@ img {
   padding: 10px;
   margin-top: 10px;
   border-radius: 4px;
-  max-width: 550px;
+  max-width: 580px;
 }
 
 .hero__txt-descbox a {
   color: #004E93;
   font-size: 0.9em;
+  padding-left: 4px;
 }
 
 .hero__txt-hi {
