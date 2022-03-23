@@ -17,7 +17,7 @@
     "WONIK": [{
         "title": "원익웹진 여름, 가을, 겨울호",
         "client": "원익",
-        "desc": "#반응형 #웹진 <a href='https://wonikwebzine.com/' target='_blank'>#wonikwebzine.com</a>"
+        "desc": "#반응형 #웹진"
     }],
     "NTECH": [{
         "title": "경기지방중소벤처기업청 신성장기술매칭플랫폼 ",
@@ -32,62 +32,62 @@
     "BIO": [{
         "title": "바이오파마 반응형웹",
         "client": "바이오파마",
-        "desc": "#반응형 <a href='http://biopharmacorp.com' target='_blank'>#biopharmacorp.com</a>"
+        "desc": "#반응형"
     }],
     "PETRATECH": [{
         "title": "페트라텍 반응형웹",
         "client": "페트라텍",
-        "desc": "#반응형 <a href='http://www.petratec.kr' target='_blank'>#biopharmacorp.com</a>"
+        "desc": "#반응형"
     }],
     "GAON": [{
         "title": "가온하이테크",
         "client": "가온하이테크",
-        "desc": "#반응형  <a href='http://gaonht.com' target='_blank'>#gaonht.com</a>"
+        "desc": "#반응형"
     }],
     "DIDLAB": [{
         "title": "DID기술융합공작소",
         "client": "DID기술융합공작소",
-        "desc": "#반응형  <a href='didmakerspace.kr' target='_blank'>#didmakerspace.kr</a>"
+        "desc": "#반응형"
     }],
     "DSE": [{
         "title": "계양DSE지식산업센터 분양 랜딩페이지",
         "client": "계양DSE지식산업센터",
-        "desc": "#반응형 #디자인 <a href='http://gydse.co.kr' target='_blank'>#gydse.co.kr</a>"
+        "desc": "#반응형 #디자인"
     }],
     "ASOLUTION": [{
         "title": "에이솔루션",
         "client": "에이솔루션",
-        "desc": "#반응형  <a href='http://asolutionkorea.co.kr' target='_blank'>asolutionkorea.co.kr</a>"
+        "desc": "#반응형"
     }],
     "SSUGLOBAL": [{
         "title": "숭실대학교 국제법무학과 학과홈페이지",
         "client": "숭실대학교",
-        "desc": "#반응형 #디자인 <a href='https://lawyer.ssu.ac.kr/web/' target='_blank'>lawyer.ssu.ac.kr</a>"
+        "desc": "#반응형 #디자인"
     }],
     "MKG": [{
         "title": "주식회사 MKG 신규반응형웹",
         "client": "MKG",
-        "desc": "#반응형 <a href='http://mkgenc.co.kr' target='_blank'>mkgenc.co.kr</a>"
+        "desc": "#반응형"
     }],
     "디자인FORTE": [{
         "title": "디자인포르테 풀페이지 반응형웹",
         "client": "디자인포르테",
-        "desc": "#반응형  #fullpage <a href='https://designforte.co.kr' target='_blank'>designforte.co.kr</a>"
+        "desc": "#반응형  #fullpage"
     }],
     "GSFIC": [{
         "title": "GSFIC 웹진 & 뉴스레터 2019.05월호",
         "client": "GSFIC",
-        "desc": "#뉴스레터  <a href='http://www.gafic.or.kr/webzine/201905' target='_blank'>gafic.or.kr</a>"
+        "desc": "#뉴스레터"
     }],
     "ANYMEDI": [{
         "title": "애니메디앤헬스케어",
         "client": "애니메디앤헬스케어",
-        "desc": "#반응형  <a href='http://www.anymedinhealth.com' target='_blank'>anymedinhealth.com</a>"
+        "desc": "#반응형"
     }],
     "QINS": [{
         "title": "대한환자안전질향상간호사회",
         "client": "대한환자안전질향상간호사회",
-        "desc": "#반응형  <a href='http://qi.or.kr' target='_blank'>qi.or.kr</a>"
+        "desc": "#반응형"
     }],
     "TABBY": [{
         "title": "반려동물 용품 중고거래 APP 태비핸즈 ",
@@ -97,7 +97,7 @@
     "GERI": [{
         "title": "구미전자정보기술원 반응형웹 리뉴얼",
         "client": "구미전자정보기술원",
-        "desc": "#반응형  <a href='http://www.geri.re.kr' target='_blank'>geri.re.kr</a>"
+        "desc": "#반응형"
     }],
     "LUCHE": [{
         "title": "루체스타 수원 오피스텔 분양사이트 반응형 디자인 & UI",
@@ -107,22 +107,22 @@
     "SECRET": [{
         "title": "시크릿아일랜드",
         "client": "시크릿아일랜드",
-        "desc": "#반응형  #디자인 <a href='http://secret-island.co.kr' target='_blank'>secret-island.co.kr</a>"
+        "desc": "#반응형  #디자인"
     }],
     "GAONCONS": [{
         "title": "가온건설",
         "client": "가온건설",
-        "desc": "#반응형  <a href='http://gaoncons.com' target='_blank'>gaoncons.com</a>"
+        "desc": "#반응형"
     }],
     "KMF": [{
         "title": "한국매니지먼트연합 반응형웹/관리자페이지 & 디자인",
         "client": "한국매니지먼트연합",
-        "desc": "#반응형 #디자인  <a href='http://kmf5678.or.kr' target='_blank'>kmf5678.or.kr</a>"
+        "desc": "#반응형 #디자인"
     }],
     "ANYTAPE": [{
         "title": "애니테이프",
         "client": "애니테이프",
-        "desc": "#반응형  <a href='http://anytape.kr' target='_blank'>anytape.kr</a>"
+        "desc": "#반응형"
     }],
     "DWFL": [{
         "title": "대원외국어고등학교",
