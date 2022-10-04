@@ -537,7 +537,7 @@ img {
       -ms-flex-align: stretch;
           align-items: stretch;
   grid-gap: 20px 20px;
-  gap: 40px 20px;
+  gap: 40px 1px;
 }
 
 .project-list__item {
@@ -552,7 +552,7 @@ img {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 31%;
           flex: 1 1 31%;
-  max-width: 31%;
+  max-width: 33%;
 }
 
 .project-list__item:hover .open-modal {
@@ -592,8 +592,9 @@ img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   max-width: initial;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
+  min-width: 100%;
 }
 
 .project-list__item__title {
@@ -611,6 +612,7 @@ img {
   color: #999;
   font-size: 11px;
   margin-top: 5px;
+  letter-spacing: 0;
 }
 
 .project-list__item__skills {

@@ -6,7 +6,7 @@
         "desc": "윙크스톤 개인/법인 투자자용 사이트",
         "img": "static/images/contents/wsinvest_detail.png",
         "contritube": "100%",
-        "skill": "responsive, figma ",
+        "skill": "responsive,figma",
         "thumb": "static/images/thumb_winkstoneInvest.png"
     }],
     "WSLOAN": [{
@@ -16,7 +16,7 @@
         "desc": "윙크스톤의 다양한 대출상품을 이용할 수 있는 대출자전용 사이트",
         "img": "static/images/contents/wsloan_detail.png",
         "contritube": "100%",
-        "skill": "responsive, figma ",
+        "skill": "responsive,figma",
         "thumb": "static/images/thumb_winkstoneLoan.png"
     }],
     "WSCORP": [{
@@ -26,7 +26,7 @@
         "desc": "윙크스톤파트너스 기업홈페이지 반응형 리뉴얼",
         "img": "static/images/contents/wscorp_detail.png",
         "contritube": "100%",
-        "skill": "responsive, figma ",
+        "skill": "responsive,figma",
         "thumb": "static/images/thumb_winkstoneCorp.png"
     }],
     "WC": [{
@@ -36,7 +36,7 @@
         "desc": "기업/신기술 금융여신전문금융, 웰컴캐피탈 신규 반응형웹 UI",
         "img": "static/images/contents/wc_detail.png",
         "contritube": "100%",
-        "skill": "responsive, zeplin ",
+        "skill": "responsive,zeplin ",
         "thumb": "static/images/thumb_wc.png"
     }],
     "LAO": [{
@@ -46,7 +46,7 @@
         "desc": "웰컴금융그룹의 해외법인 라오스 사이트 리뉴얼, 반응형",
         "img": "static/images/contents/lao_detail.png",
         "contritube": "100%",
-        "skill": "responsive, sketch",
+        "skill": "responsive,sketch",
         "thumb": "static/images/thumb_lao.png"
     }],
     "LGD": [{
@@ -152,7 +152,7 @@
     "NEMODIVE": [{
         "title": "니모다이브 디자인&UI",
         "client": "니모다이브",
-        "link": "-",
+        "link": "<a href='http://nemodive.kr/' target='_blank'>nemodive.kr</a>",
         "desc": "필리핀 세부에 위치한 니모다이브센터의 신규 반응형 웹사이트 구축",
         "img": "static/images/contents/nemo_detail.png",
         "contritube": "100%",
