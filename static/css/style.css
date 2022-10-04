@@ -324,7 +324,7 @@ img {
 }
 
 .header__container {
-  max-width: 1080px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   height: 100%;
@@ -339,7 +339,7 @@ img {
           justify-content: space-between;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1440px) {
   .header__container {
     padding: 0 2rem;
   }
@@ -369,7 +369,7 @@ img {
 
 .hero {
   padding: 18rem 0 5rem 0;
-  max-width: 1080px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -424,12 +424,25 @@ img {
 }
 
 .section-modal__inner__title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding-bottom: 2rem;
-  max-width: 1080px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.section-modal__inner__title::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #c787ff;
+  position: absolute;
+  left: -8px;
+  top: 0;
+  border-radius: 100%;
 }
 
 .section-modal__inner__title span {
@@ -444,7 +457,7 @@ img {
 .experience {
   border-top: 1px solid #222;
   font-size: 1.4rem;
-  max-width: 1080px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 6rem;
@@ -511,7 +524,7 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-bottom: 10rem;
-  max-width: 1080px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   -webkit-box-orient: horizontal;
@@ -739,7 +752,7 @@ img {
 }
 
 .proejct-top-img {
-  width: 1080px;
+  width: 1440px;
   height: 300px;
   margin-left: auto;
   margin-right: auto;

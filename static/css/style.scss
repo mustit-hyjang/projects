@@ -70,7 +70,7 @@ $color-background:#fff;
     box-shadow: 0 4px 10px rgba($color: #000000, $alpha: 0.1);
 
     &__container {
-        max-width: 1080px;
+        max-width: 1440px;
         @include push--auto;
         height: 100%;
         display: flex;
@@ -104,7 +104,7 @@ $color-background:#fff;
 
 .hero {
     padding: 18rem 0 5rem 0;
-    max-width: 1080px;
+    max-width: 1440px;
     @include push--auto;
 
     &__txt-gradient {
@@ -160,11 +160,21 @@ $color-background:#fff;
 
 
 .section-modal__inner__title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding-bottom: 2rem;
-    max-width: 1080px;
+    max-width: 1440px;
     @include push--auto;
     margin-top: 5rem;
+    font-weight: 700;
+    position: relative;
+
+    &::after{
+         content: ''; 
+         width: 6px; height: 6px;
+         background: #c787ff;
+         position: absolute; left: -8px; top: 0;
+         border-radius: 100%;
+    }
 
     span {
         background-color: #FF3CAC;
@@ -180,7 +190,7 @@ $color-background:#fff;
 .experience {
     border-top: 1px solid #222;
     font-size: 1.4rem;
-    max-width: 1080px;
+    max-width: 1440px;
     @include push--auto;
     padding-top: 6rem;
 
@@ -252,7 +262,7 @@ $color-background:#fff;
     flex-wrap: wrap;
 
     padding-bottom: 10rem;
-    max-width: 1080px;
+    max-width: 1440px;
     @include push--auto;
     flex-direction: row;
     align-content: flex-start;
@@ -441,7 +451,7 @@ $color-background:#fff;
 }
 
 .proejct-top-img {
-    width: 1080px;
+    width: 1440px;
     height: 300px;
     @include push--auto;
     background: url('../images/ui_image_01.png') no-repeat center / cover;
